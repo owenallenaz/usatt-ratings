@@ -1,7 +1,7 @@
 import { deepStrictEqual } from "assert";
-import { testArray, TestDef } from "@simpleview/mochalib";
-import { Match, Player, PlayerResult } from "../types";
-import processTournament from "../processTournament";
+import { testArray, type TestDef } from "@simpleview/mochalib";
+import type { Match, Player, PlayerResult } from "../types.js";
+import processTournament from "../processTournament.js";
 
 const players: Player[] = [
 	{

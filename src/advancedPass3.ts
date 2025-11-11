@@ -1,5 +1,5 @@
-import { ok } from "assert";
-import { Match, RatingMap } from "./types";
+import ok from "./ok.js";
+import type { Match, RatingMap } from "./types.js";
 
 export default function advancedPass3(id: string, p1Rating: number, matches: Match[], ratingMap: RatingMap): number {
 	let bestWin = 0;

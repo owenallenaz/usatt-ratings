@@ -1,6 +1,6 @@
 import { strictEqual } from "assert";
-import calculatePoints from "../calculatePoints";
-import { testArray, TestDef } from "@simpleview/mochalib";
+import calculatePoints from "../calculatePoints.js";
+import { testArray, type TestDef } from "@simpleview/mochalib";
 
 describe(__filename, function() {
 	interface Test {

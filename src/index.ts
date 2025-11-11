@@ -1,1 +1,1 @@
-export { default as processTournament } from "./processTournament";
+export { default as processTournament } from "./processTournament.js";

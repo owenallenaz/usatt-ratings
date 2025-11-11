@@ -1,9 +1,12 @@
-import { ok } from "assert";
-import getMap from "./getMap";
-import processMatches from "./processMatches";
-import { Match, Player, PlayerResult } from "./types";
-import processPass3 from "./processPass3";
+import ok from "./ok.js";
+import getMap from "./getMap.js";
+import processMatches from "./processMatches.js";
+import type { Match, Player, PlayerResult } from "./types.js";
+import processPass3 from "./processPass3.js";
 
+/**
+ * Process an array of matches with an array of players and return an array of results
+*/
 export default function processTournament(matches: Match[], players: Player[]): PlayerResult[] {
 	const initialRatings = getMap(players);
 	const pass3 = processPass3(matches, initialRatings);

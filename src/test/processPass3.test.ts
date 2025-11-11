@@ -1,8 +1,8 @@
 import { deepStrictEqual } from "assert";
-import { testArray, TestDef } from "@simpleview/mochalib";
-import { Match, RatingMap } from "../types";
-import getMap from "../getMap";
-import processPass3 from "../processPass3";
+import { testArray, type TestDef } from "@simpleview/mochalib";
+import type { Match, RatingMap } from "../types.js";
+import getMap from "../getMap.js";
+import processPass3 from "../processPass3.js";
 
 const ratingMap = getMap([
 	{

@@ -1,7 +1,7 @@
-import { ok } from "assert";
-import processMatches from "./processMatches";
-import { Match, RatingMap } from "./types";
-import advancedPass3 from "./advancedPass3";
+import ok from "./ok.js";
+import processMatches from "./processMatches.js";
+import type { Match, RatingMap } from "./types.js";
+import advancedPass3 from "./advancedPass3.js";
 
 export default function processPass3(matches: Match[], ratingMap: RatingMap): RatingMap {
 	const pass3Part1 = processMatches(matches, ratingMap);

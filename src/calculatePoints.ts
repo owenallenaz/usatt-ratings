@@ -1,3 +1,4 @@
+/** Process the point conversion from a winner USATT rating to a loser USATT rating */
 export default function calculatePoints(winner: number, loser: number): number {
 	const diff = winner - loser;
 	let points;

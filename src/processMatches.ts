@@ -1,6 +1,9 @@
-import calculatePoints from "./calculatePoints";
-import { Match, RatingMap } from "./types";
+import calculatePoints from "./calculatePoints.js";
+import type { Match, RatingMap } from "./types.js";
 
+/**
+ * Process an array of matches with an incoming RatingMap and return an update RatingMap
+*/
 export default function processMatches(matches: Match[], ratingMap: RatingMap): RatingMap {
 	const initialRatings = ratingMap;
 	const newRatings = new Map(ratingMap);
