@@ -1,0 +1,13 @@
+{
+	"extends": "@tsconfig/node20/tsconfig.json",
+	"compilerOptions": {
+		"baseUrl": "./",
+		"noErrorTruncation": true
+	},
+	"ts-node": {
+		"swc": true,
+		"transpileOnly": true
+	},
+	"exclude": ["node_modules"],
+	"include": ["src"]
+}
