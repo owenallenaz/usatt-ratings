@@ -19,6 +19,12 @@
 		"mocha": "11.7.1",
 		"rimraf": "6.1.0"
 	},
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": "./dist/index.js"
+	},
 	"scripts": {
 		"build": "rimraf dist && tsc --project tsconfig.build.json",
 		"test": "mocha --import=tsx  **/*.test.ts"
