@@ -44,8 +44,8 @@ describe(__filename, function() {
 			args: { winner: 1500, loser: 1300, result: 1 }
 		},
 		{
-			name: "diff 287+ (expected)",
-			args: { winner: 1500, loser: 1200, result: 0 }
+			name: "diff 238+ (expected)",
+			args: { winner: 1500, loser: 1250, result: 0 }
 		},
 		// Upset result (lower rated player wins)
 		{
