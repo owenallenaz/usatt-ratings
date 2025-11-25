@@ -1,6 +1,6 @@
 # usatt-ratings
 
-This package has a javascript variant of the USATT (USA Table Tennis) ratings formula published at https://www.usatt.org/events-and-results/rating-systems-explained . The process of calculating the ratings can be quite difficult and this handles the hard work and multiple passes required when processing a league event or tournament. This includes the initial point transfer from a single match, as well as the pass calculations that ensures if one players gains too many points, it will adjust their rating and re-run all prior matches.
+This package has a javascript variant of the USATT (USA Table Tennis) ratings formula published at https://usatt.simplycompete.com/info/ratings . The process of calculating the ratings can be quite difficult and this handles the hard work and multiple passes required when processing a league event or tournament. This includes the initial point transfer from a single match, as well as the pass calculations that ensures if one players gains too many points, it will adjust their rating and re-run all prior matches.
 
 The one feature of the official spec that it does not support is account for entirely unrated participants. As the tournament director, you will need to give participants at least your best guess for their initial rating if that situation arises.
 

@@ -84,6 +84,97 @@ describe(__filename, function() {
 			}
 		},
 		{
+			name: "should utilize average of opponents if rating gain over 75 and all wins - rounded down",
+			args: {
+				ratingMap: getMap([
+					{
+						id: "1",
+						rating: 1551
+					},
+					{
+						id: "2",
+						rating: 1490
+					},
+					{
+						id: "3",
+						rating: 1300
+					},
+					{
+						id: "4",
+						rating: 1800
+					}
+				]),
+				matches: [
+					{
+						winner: "3",
+						loser: "1"
+					},
+					{
+						winner: "3",
+						loser: "2"
+					},
+					{
+						winner: "3",
+						loser: "4"
+					}
+				],
+				result: results([
+					1551,
+					1490,
+					1613,
+					1800
+				])
+			}
+		},
+		{
+			name: "should utilize average of best win and worst loss and first pass if rating gain over 75 and wins and losses - rounded down",
+			args: {
+				ratingMap: getMap([
+					{
+						id: "1",
+						rating: 1551
+					},
+					{
+						id: "2",
+						rating: 1490
+					},
+					{
+						id: "3",
+						rating: 1300
+					},
+					{
+						id: "4",
+						rating: 1805
+					}
+				]),
+				matches: [
+					{
+						winner: "3",
+						loser: "1"
+					},
+					{
+						winner: "3",
+						loser: "2"
+					},
+					{
+						winner: "3",
+						loser: "4"
+					},
+					{
+						winner: "2",
+						loser: "3"
+					}
+				],
+				result: results([
+					1551,
+					1490,
+					// pass3part1 is 1439, best win 1805, worst loss 1490 === (1439 + ((1805 + 1490) / 2)) / 2
+					1543,
+					1805
+				])
+			}
+		},
+		{
 			name: "should utilize average of best win and worst loss and first pass if rating gain over 75 and wins and losses",
 			args: {
 				ratingMap,

@@ -29,13 +29,15 @@ export default function advancedPass3(id: string, p1Rating: number, matches: Mat
 
 	if (hasLoss) {
 		const opponentAverage = (bestWin + worstLoss) / 2;
-		return (p1Rating + opponentAverage) / 2;
+		return Math.floor((p1Rating + opponentAverage) / 2);
 	} else {
-		return myMatches.reduce((prev, curr) => {
+		const total = myMatches.reduce((prev, curr) => {
 			const loserRating = ratingMap.get(curr.loser);
 			ok(loserRating);
 
 			return prev + loserRating;
-		}, 0) / myMatches.length;
+		}, 0);
+
+		return Math.floor(total / myMatches.length);
 	}
 }
